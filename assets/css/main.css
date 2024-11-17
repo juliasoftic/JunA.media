@@ -1,11 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
 
-/*
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -192,6 +187,7 @@ input, select, textarea {
 
 	h3 {
 		font-size: 1.15em;
+		font-style: italic;
 		line-height: 1.75em;
 	}
 
@@ -2192,7 +2188,7 @@ input, select, textarea {
 			vertical-align: middle;
 		}
 
-		ul.actions.special {
+		ul.actions.special.header {
 			-moz-justify-content: center;
 			-webkit-justify-content: center;
 			-ms-justify-content: center;
@@ -2201,50 +2197,23 @@ input, select, textarea {
 			margin-left: 0;
 		}
 
+		ul.actions.special {
+			-moz-justify-content: flex-start; /* Links ausgerichtet für ältere Mozilla-Browser */
+			-webkit-justify-content: flex-start; /* Links ausgerichtet für ältere WebKit-Browser */
+			-ms-justify-content: flex-start; /* Links ausgerichtet für ältere Microsoft-Browser */
+			justify-content: flex-start; /* Links ausgerichtet */
+			width: 100%;
+			margin-left: 0;
+			padding-left: 0; /* Optional: Entfernt zusätzlichen Einzug */
+			list-style: none; /* Optional: Entfernt Punkte oder Zahlen in der Liste */
+		}
+		
+
 			ul.actions.special li:first-child {
 				padding-left: 0;
 			}
 
-		ul.actions.stacked {
-			-moz-flex-direction: column;
-			-webkit-flex-direction: column;
-			-ms-flex-direction: column;
-			flex-direction: column;
-			margin-left: 0;
-		}
-
-			ul.actions.stacked li {
-				padding: 1em 0 0 0;
-			}
-
-				ul.actions.stacked li:first-child {
-					padding-top: 0;
-				}
-
-		ul.actions.fit {
-			width: calc(100% + 1em);
-		}
-
-			ul.actions.fit li {
-				-moz-flex-grow: 1;
-				-webkit-flex-grow: 1;
-				-ms-flex-grow: 1;
-				flex-grow: 1;
-				-moz-flex-shrink: 1;
-				-webkit-flex-shrink: 1;
-				-ms-flex-shrink: 1;
-				flex-shrink: 1;
-				width: 100%;
-			}
-
-				ul.actions.fit li > * {
-					width: 100%;
-				}
-
-			ul.actions.fit.stacked {
-				width: 100%;
-			}
-
+		
 		@media screen and (max-width: 480px) {
 
 			ul.actions:not(.fixed) {
